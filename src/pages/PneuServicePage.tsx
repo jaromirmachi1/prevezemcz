@@ -229,35 +229,6 @@ const BookingActions = styled.div`
   gap: 0.7rem;
 `;
 
-const WebButton = styled.a`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  border-radius: 999px;
-  padding: 0.95rem 1.35rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.04);
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
-
-  &:hover,
-  &:focus-visible {
-    transform: translateY(-1px);
-    border-color: rgba(255, 159, 87, 0.7);
-    background: rgba(255, 159, 87, 0.1);
-    outline: none;
-  }
-`;
-
 const VisualCard = styled.figure`
   position: relative;
   margin: 0;
