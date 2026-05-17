@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function HeroSection() {
@@ -21,7 +22,7 @@ function HeroSection() {
           <p>Převoz manipulační techniky, aut a nákladního zboží</p>
           <HeroFooter>
             <Actions>
-              <PrimaryButton href="#kontakt">Objednat převoz</PrimaryButton>
+              <PrimaryButton to="/kontakt">Objednat převoz</PrimaryButton>
             </Actions>
             <FloatingCard>
               <strong>Do 10 tun</strong>
@@ -172,7 +173,7 @@ const Actions = styled.div`
   flex-wrap: wrap;
 `;
 
-const PrimaryButton = styled.a`
+const PrimaryButton = styled(Link)`
   padding: 0.9rem 1.2rem;
   border-radius: 999px;
   text-decoration: none;
