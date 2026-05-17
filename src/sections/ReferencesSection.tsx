@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 import TiltedCard from '../components/TiltedCard'
+import mn1 from '../assets/mn1.jpg'
+import mn5 from '../assets/mn5.jpg'
+import mn9 from '../assets/mn9.jpg'
+import mn14 from '../assets/mn14.jpg'
+import mn20 from '../assets/mn20.jpg'
 
 const cards = [
   {
     metric: '10+',
     title: 'Let zkušeností',
     description: 'Stabilní procesy a ověřené know-how pro firemní i individuální převoz.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: mn1,
     icon: (
       <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
         <path
@@ -21,8 +25,7 @@ const cards = [
     metric: '24/7',
     title: 'Rychlá dostupnost',
     description: 'Výjezdy řešíme operativně tak, aby vaše logistika nestála.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: mn5,
     icon: (
       <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
         <path
@@ -36,8 +39,7 @@ const cards = [
     metric: 'ČR + EU',
     title: 'Mezinárodní pokrytí',
     description: 'Přeprava po Česku i Evropě s důrazem na bezpečnost a termíny.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: mn9,
     icon: (
       <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
         <path
@@ -51,8 +53,7 @@ const cards = [
     metric: '1.5T',
     title: 'Možnost objednání dodávky',
     description: 'Citroen Jumper a Ford Transit pro bezpečný převoz lehčího nákladu.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1601584115702-5f4f41e8f1f0?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: mn14,
     icon: (
       <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
         <path
@@ -66,8 +67,7 @@ const cards = [
     metric: 'EXPRES',
     title: 'Rychle a bezpečně',
     description: 'Operativní dispatch a profesionální posádka od naložení po doručení.',
-    imageUrl:
-      'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1400&q=80',
+    imageUrl: mn20,
     icon: (
       <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
         <path

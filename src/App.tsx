@@ -8,13 +8,11 @@ import ContactPage from "./pages/ContactPage";
 import FleetPage from "./pages/FleetPage";
 import PneuServicePage from "./pages/PneuServicePage";
 import ServicesPage from "./pages/ServicesPage";
-import VanRentalPage from "./pages/VanRentalPage";
 import ContactSection from "./sections/ContactSection";
 import HeroSection from "./sections/HeroSection";
 import RealizationsSection from "./sections/RealizationsSection";
 import ReferencesSection from "./sections/ReferencesSection";
 import ServicesSection from "./sections/ServicesSection";
-import VanRentalSection from "./sections/VanRentalSection";
 
 function App() {
   const { pathname } = useLocation();
@@ -36,7 +34,6 @@ function App() {
                 <ReferencesSection />
                 <ServicesSection />
                 <RealizationsSection />
-                <VanRentalSection />
               </main>
               <ContactSection />
             </>
@@ -45,7 +42,6 @@ function App() {
         <Route path="/sluzby" element={<ServicesPage />} />
         <Route path="/vozovy-park" element={<FleetPage />} />
         <Route path="/pneuservis" element={<PneuServicePage />} />
-        <Route path="/pujcovna" element={<VanRentalPage />} />
         <Route path="/kariera" element={<CareerPage />} />
         <Route path="/kontakt" element={<ContactPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />

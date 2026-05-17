@@ -7,7 +7,6 @@ const footerLinks = [
   { label: "Služby", href: "/sluzby" },
   { label: "Vozový park", href: "/vozovy-park" },
   { label: "Pneuservis", href: "/pneuservis" },
-  { label: "Půjčovna", href: "/pujcovna" },
   { label: "Kariéra", href: "/kariera" },
   { label: "Kontakt", href: "/kontakt" },
 ];
@@ -16,7 +15,6 @@ const services = [
   "Převoz manipulační techniky",
   "Přeprava aut a užitkových vozů",
   "Nákladní převoz do 10 tun",
-  "Půjčovna dodávek",
 ];
 
 function SiteFooter() {

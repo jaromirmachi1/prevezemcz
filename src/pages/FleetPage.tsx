@@ -1,84 +1,72 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import vp1 from "../assets/vp1.jpeg";
-import vp2 from "../assets/vp2.jpeg";
-import vp3 from "../assets/vp3.jpeg";
-import vp4 from "../assets/vp4.jpeg";
-import vp5 from "../assets/vp5.jpeg";
-import vp6 from "../assets/vp6.jpeg";
-import vp7 from "../assets/vp7.jpeg";
-import vp8 from "../assets/vp8.jpeg";
+import vp1 from "../assets/vpImages/vp1.jpg";
+import vp2 from "../assets/vpImages/vp2.jpg";
+import vp3 from "../assets/vpImages/vp3.jpg";
+import vp4 from "../assets/vpImages/vp4.jpg";
+import vp5 from "../assets/vpImages/vp5.jpg";
+import vp6 from "../assets/vpImages/vp6.jpg";
+import vp7 from "../assets/vpImages/vp7.jpg";
+import vp8 from "../assets/vpImages/vp8.jpg";
+import vp9 from "../assets/vpImages/vp9.jpg";
+import vp11 from "../assets/vpImages/vp11.jpg";
 
-const vehicles = [
+interface FleetVehicle {
+  name: string;
+  specs: string[];
+  image: string;
+}
+
+const vehicles: FleetVehicle[] = [
   {
-    name: "Iveco Eurocargo",
-    type: "Odtahový speciál na převoz techniky a automobilů",
-    specs: ["Ložná plocha 2,5 x 7,5 m", "Naviják", "Nosnost 9 t"],
+    name: "Fiat Doblo Maxi",
+    specs: ["Délka ložné plochy 2,05m", "Nosnost 900kg"],
     image: vp1,
   },
   {
-    name: "Odtahový speciál MAN",
-    type: "Převoz stavební techniky",
-    specs: [
-      "Nosnost 14 tun",
-      "Hydraulický naviják",
-      "Ložná plocha 7,5 x 2,5 m",
-    ],
+    name: "Peugeot Boxer L4 H3",
+    specs: ["délka ložné plochy 4,5m", "Nosnost 1500KG"],
     image: vp2,
   },
   {
-    name: "Renault Premium",
-    type: "Odtahový speciál s hydraulickou rukou",
-    specs: [
-      "Nosnost vozu 10 tun",
-      "Hydraulická ruka délka 10,8 m",
-      "Možnost převážení stavebních kontejnerů, oplocení, paletového a stavebního materiálu",
-      "Rozměr ložné plochy 7,5 x 2,5 m",
-    ],
+    name: "MAN TGX",
+    specs: ["ložná plocha 2,5x7,6m", "Nosnost 9t"],
     image: vp3,
   },
   {
-    name: "MAN TGL",
-    type: "Hydraulické čelo s nosností 2 tuny",
-    specs: [
-      "Ložná plocha 5 x 2,2 m",
-      "Nosnost 3 t",
-      "Tažné zařízení 3,5 tuny",
-      "Převoz malých plošin, palet a materiálu",
-    ],
+    name: "Dodge RAM",
+    specs: ["Tažné zařízení 3500kg "],
     image: vp4,
   },
   {
-    name: "Fiat Ducato",
-    type: "Dodávka s nosností 1,5 tuny",
-    specs: [
-      "Převoz pracovních plošin",
-      "Převoz stavebního materiálu",
-      "Možnost VZV a složení palet",
-    ],
+    name: "MAN TGL",
+    specs: ["čelo nosnost 2000kg, ložná plocha 2,2 x 5,0m , Nosnost 3000kg"],
     image: vp5,
   },
   {
-    name: "Mercedes Sprinter 316 CDI",
-    type: "Dodávka pro vozidla a materiál",
-    specs: [
-      "Nosnost 1300 kg",
-      "Tažné zařízení 2,8 t",
-      "Možnost převozu 2 ks automobilů nebo materiálu",
-    ],
+    name: "MAN TGL Valník",
+    specs: ["ložná plocha 2,5 x 7,2m , nosnost 6 Tun"],
     image: vp6,
   },
   {
-    name: "Dodge Ram",
-    type: "Převoz automobilů, plošin, bagrů a stavební techniky",
-    specs: ["Tažné zařízení 3,5 t", "Možnost převozu 2 ks osobních vozů"],
+    name: "MAN TGM",
+    specs: ["Tložná plocha 2,5 x 7,5m", "Nosnost 12,5t"],
     image: vp7,
   },
   {
-    name: "Chladící dodávka Fiat Ducato",
-    type: "Chladící a mrazící přeprava",
-    specs: ["Ford Transit s nosností 1,5 tun", "6 ks vozů skladem"],
+    name: "MAN TGA",
+    specs: ["ložná plocha 2,5 x 8m", "Nosnost 9,0t"],
     image: vp8,
+  },
+  {
+    name: "MAN TGA HR EFFER 370",
+    specs: ["ložná plocha 2,5x6,5m", "nosnost 10 Tun "],
+    image: vp9,
+  },
+  {
+    name: "Renault Premium HR EFFER 220",
+    specs: ["ložná plocha 2,5x7,5m", "Nosnost 10t"],
+    image: vp11,
   },
 ];
 
@@ -142,7 +130,6 @@ function FleetPage() {
             <CardContent>
               <CardNumber>{String(index + 1).padStart(2, "0")}</CardNumber>
               <h2>{vehicle.name}</h2>
-              <p>{vehicle.type}</p>
               <SpecList>
                 {vehicle.specs.map((spec) => (
                   <li key={spec}>{spec}</li>
@@ -318,14 +305,6 @@ const CardContent = styled.div`
     line-height: 0.9;
     letter-spacing: -0.055em;
     text-transform: uppercase;
-  }
-
-  p {
-    margin: 0.8rem 0 0;
-    color: #ffb274;
-    font-weight: 800;
-    line-height: 1.35;
-    letter-spacing: 0.01em;
   }
 `;
 

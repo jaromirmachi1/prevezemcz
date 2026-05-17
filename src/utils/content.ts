@@ -2,7 +2,6 @@ export const services = [
   'Převoz manipulační techniky',
   'Přeprava aut a užitkových vozů',
   'Nákladní převoz do 10 tun',
-  'Půjčovna dodávek v Ostravě',
 ]
 
 export const fleet = [

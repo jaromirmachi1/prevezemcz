@@ -14,14 +14,14 @@ const menuLinks = [
     kicker: "Výměna pneumatik na zimní a letní sezónu",
   },
   {
-    href: "/pujcovna",
-    label: "Půjčovna",
-    kicker: "Dodávky od 1 500 Kč / den",
-  },
-  {
     href: "/kariera",
     label: "Kariéra",
     kicker: "Přijímáme nové kolegy",
+  },
+  {
+    href: "/kontakt",
+    label: "Kontakt",
+    kicker: "Formulář a kontaktní údaje",
   },
 ];
 

@@ -15,9 +15,9 @@ const serviceCards = [
   },
   {
     title: 'Auta a dodávky',
-    text: 'Přeprava osobních i užitkových vozidel a půjčovna dodávek pro lehčí náklad, nábytek nebo materiál od 1 500 Kč / den.',
-    meta: 'Plošiny, přívěsy, půjčovna',
-    href: '/pujcovna',
+    text: 'Přeprava osobních i užitkových vozidel na odtahové plošině, podvalu i s přívěsem.',
+    meta: 'Plošiny, přívěsy',
+    href: '/vozovy-park',
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M5 11 6.6 7h10.8L19 11h1.5v6h-2a2.4 2.4 0 0 1-4.8 0H10.3a2.4 2.4 0 0 1-4.8 0h-2v-6H5Zm2.8 6.8a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6Zm8.4 0a.8.8 0 1 0 0-1.6.8.8 0 0 0 0 1.6ZM7 11h10l-.8-2H7.8L7 11Z" />
@@ -35,39 +35,6 @@ const serviceCards = [
       </svg>
     ),
   },
-  {
-    title: 'Vozový park pro těžké zakázky',
-    text: 'Iveco Eurocargo, MAN, Renault Premium s hydraulickou rukou, MAN TGL, dodávky i chladící vozy pro různé typy přepravy.',
-    meta: 'Nosnost až 14 tun, HR 10,8 m',
-    href: '/vozovy-park',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M4 5h8v5h3.4L18 13.2V17h-1.2a2.4 2.4 0 0 1-4.6 0H9.8a2.4 2.4 0 0 1-4.6 0H4V5Zm3.5 12.7a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4Zm7 0a.7.7 0 1 0 0-1.4.7.7 0 0 0 0 1.4ZM6 7v7h10.4l-1.9-2H10V7H6Z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Půjčovna dodávek',
-    text: 'Citroen Jumper a Ford Transit pro převoz lehčího nákladu, nábytku nebo materiálu. Jasná cena od 1 500 Kč / den.',
-    meta: 'Vratná kauce 10 000 Kč',
-    href: '/pujcovna',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M3 8h10v8h2.2l1.2-3H21v3h1v2h-1.3a2.2 2.2 0 0 1-4.3 0H9.6a2.2 2.2 0 0 1-4.3 0H3V8Zm4.5 10.6a.6.6 0 1 0 0-1.2.6.6 0 0 0 0 1.2Zm11 0a.6.6 0 1 0 0-1.2.6.6 0 0 0 0 1.2ZM5 10v6h6v-6H5Z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Pneuservis',
-    text: 'Profesionální přezutí a vyvážení pneumatik pro osobní i nákladní automobily, včetně zimní a letní sezóny.',
-    meta: 'Pneuservis Frýdek-Místek',
-    href: '/pneuservis',
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18Zm0 2.2a6.8 6.8 0 1 0 0 13.6 6.8 6.8 0 0 0 0-13.6Zm0 3a3.8 3.8 0 1 1 0 7.6 3.8 3.8 0 0 1 0-7.6Zm0 2a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6Z" />
-      </svg>
-    ),
-  },
 ]
 
 function ServicesSection() {
@@ -77,7 +44,7 @@ function ServicesSection() {
         <Eyebrow>Služby</Eyebrow>
         <SectionTitle>Co pro vás vyřešíme</SectionTitle>
         <p>
-          Od těžké techniky přes vozidla až po dodávky a pneuservis. Vše je
+          Od těžké techniky přes vozidla až po pneuservis. Vše je
           postavené na rychlé domluvě, vhodné technice a bezpečném doručení.
         </p>
       </Intro>
@@ -136,7 +103,7 @@ const Eyebrow = styled.span`
 const SectionTitle = styled.h2`
   margin: 0;
   font-size: clamp(2.5rem, 6.4vw, 6.2rem);
-  line-height: 0.9;
+  line-height: 1.12;
   letter-spacing: -0.055em;
   text-transform: uppercase;
 `

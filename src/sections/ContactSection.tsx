@@ -3,7 +3,6 @@ import styled from "styled-components";
 function ContactSection() {
   return (
     <Footer id="kontakt">
-      <SectionNumber aria-hidden="true">03</SectionNumber>
       <Content>
         <Intro>
           <Eyebrow>Kontakt</Eyebrow>
@@ -101,7 +100,7 @@ const Intro = styled.div`
   h2 {
     margin: 0.65rem 0 1rem;
     font-size: clamp(2.6rem, 7vw, 6.8rem);
-    line-height: 0.98;
+    line-height: 1.12;
     text-transform: uppercase;
     letter-spacing: -0.02em;
   }
@@ -242,14 +241,3 @@ const SubmitButton = styled.button`
   }
 `;
 
-const SectionNumber = styled.span`
-  position: absolute;
-  right: 4vw;
-  bottom: -2rem;
-  color: rgba(255, 255, 255, 0.035);
-  font-size: clamp(7rem, 19vw, 17rem);
-  line-height: 0.8;
-  font-weight: 900;
-  letter-spacing: -0.08em;
-  pointer-events: none;
-`;

@@ -14,7 +14,10 @@ function HeroSection() {
       <HeroContent>
         <HeroCopy>
           <Eyebrow>Ostrava - ČR - Evropa</Eyebrow>
-          <h1>Převezem to.</h1>
+          <h1>
+            <HeroTitleLine>Síla pro</HeroTitleLine>
+            <HeroTitleLine>váš náklad</HeroTitleLine>
+          </h1>
           <p>Převoz manipulační techniky, aut a nákladního zboží</p>
           <HeroFooter>
             <Actions>
@@ -116,13 +119,11 @@ const HeroCopy = styled.div`
   max-width: 700px;
 
   h1 {
-    font-size: clamp(3rem, 8.8vw, 8rem);
-    line-height: 0.86;
+    font-size: clamp(2.5rem, 6.5vw, 6.25rem);
+    line-height: 1.12;
     text-transform: uppercase;
     letter-spacing: -0.05em;
     margin: 0.65rem 0 0.8rem;
-    max-width: 7.2ch;
-    text-wrap: balance;
   }
 
   p {
@@ -135,11 +136,13 @@ const HeroCopy = styled.div`
 
   @media (max-width: 760px) {
     h1 {
-      font-size: clamp(2.8rem, 16vw, 5rem);
-      line-height: 0.9;
-      max-width: 7ch;
+      font-size: clamp(2.25rem, 11vw, 4.1rem);
     }
   }
+`;
+
+const HeroTitleLine = styled.span`
+  display: block;
 `;
 
 const Eyebrow = styled.span`

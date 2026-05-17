@@ -1,23 +1,30 @@
 import { useState } from "react";
 import styled from "styled-components";
-import m9 from "../assets/,m9.jpeg";
-import mn from "../assets/mn.jpeg";
-import mn2 from "../assets/mn2.jpeg";
-import mn3 from "../assets/mn3.jpeg";
-import mn4 from "../assets/mn4.jpeg";
-import mn5 from "../assets/mn5.jpeg";
-import mn6 from "../assets/mn6.jpeg";
-import mn7 from "../assets/mn7.jpeg";
-import mn8 from "../assets/mn8.jpeg";
-import mn10 from "../assets/mn10.jpeg";
-import mn11 from "../assets/mn11.jpeg";
-import mn12 from "../assets/mn12.jpeg";
-import mn13 from "../assets/mn13.jpeg";
-import mn14 from "../assets/mn14.jpeg";
+import mn1 from "../assets/mn1.jpg";
+import mn2 from "../assets/mn2.jpg";
+import mn3 from "../assets/mn3.jpg";
+import mn4 from "../assets/mn4.jpg";
+import mn5 from "../assets/mn5.jpg";
+import mn6 from "../assets/mn6.jpg";
+import mn7 from "../assets/mn7.jpg";
+import mn8 from "../assets/mn8.jpg";
+import mn9 from "../assets/mn9.jpg";
+import mn10 from "../assets/mn10.jpg";
+import mn11 from "../assets/mn11.jpg";
+import mn12 from "../assets/mn12.jpg";
+import mn13 from "../assets/mn13.jpg";
+import mn14 from "../assets/mn14.jpg";
+import mn15 from "../assets/mn15.jpg";
+import mn16 from "../assets/mn16.jpg";
+import mn17 from "../assets/mn17.jpg";
+import mn18 from "../assets/mn18.jpg";
+import mn19 from "../assets/mn19.jpg";
+import mn20 from "../assets/mn20.jpg";
+import mn21 from "../assets/mn21.jpg";
+import mn22 from "../assets/mn22.jpg";
 
 const realizations = [
-  { src: m9, alt: "Nakladač přepravovaný na odtahovém speciálu" },
-  { src: mn, alt: "Pásové rypadlo přepravované na podvalu" },
+  { src: mn1, alt: "Pásové rypadlo přepravované na podvalu" },
   { src: mn2, alt: "Manipulační technika na odtahovém voze" },
   { src: mn3, alt: "Přeprava bagru na nákladním odtahovém voze" },
   { src: mn4, alt: "Nákladní převoz vysokozdvižné plošiny" },
@@ -25,11 +32,20 @@ const realizations = [
   { src: mn6, alt: "Přeprava automobilu na odtahové plošině" },
   { src: mn7, alt: "Nákladní převoz vibračního válce" },
   { src: mn8, alt: "Přeprava pracovní plošiny na nákladním voze" },
+  { src: mn9, alt: "Nakladač přepravovaný na odtahovém speciálu" },
   { src: mn10, alt: "Nákladní převoz mobilních zařízení" },
   { src: mn11, alt: "Převoz plošiny pro stavební práce" },
   { src: mn12, alt: "Přeprava chemických toalet na přívěsu" },
   { src: mn13, alt: "Převoz dodávky Mercedes s přívěsem" },
   { src: mn14, alt: "Nákladní přeprava zdvihací techniky" },
+  { src: mn15, alt: "Přeprava stavební techniky na nákladním voze" },
+  { src: mn16, alt: "Odtah manipulační techniky na podvalu" },
+  { src: mn17, alt: "Převoz nákladní automobilové techniky" },
+  { src: mn18, alt: "Nákladní přeprava průmyslového zařízení" },
+  { src: mn19, alt: "Přeprava bagru na odtahové plošině" },
+  { src: mn20, alt: "Převoz vozidla na specializovaném odtahu" },
+  { src: mn21, alt: "Nákladní transport stavebního stroje" },
+  { src: mn22, alt: "Realizace převozu těžké techniky" },
 ];
 
 function RealizationsSection() {
@@ -50,7 +66,7 @@ function RealizationsSection() {
       <GalleryWrap>
         <MasonryGrid>
           {visibleItems.map((item, index) => (
-            <Card key={`${item.src}-${index}`}>
+            <Card key={`realization-${index + 1}`}>
               <img src={item.src} alt={item.alt} loading="lazy" />
             </Card>
           ))}
