@@ -25,12 +25,12 @@ const vehicles: FleetVehicle[] = [
   },
   {
     name: "Peugeot Boxer L4 H3",
-    specs: ["délka ložné plochy 4,5m", "Nosnost 1500KG"],
+    specs: ["Délka ložné plochy 4,5m", "Nosnost 1500KG"],
     image: vp2,
   },
   {
     name: "MAN TGX",
-    specs: ["ložná plocha 2,5x7,6m", "Nosnost 9t"],
+    specs: ["Ložná plocha 2,5x7,6m", "Nosnost 9t"],
     image: vp3,
   },
   {
@@ -40,32 +40,32 @@ const vehicles: FleetVehicle[] = [
   },
   {
     name: "MAN TGL",
-    specs: ["čelo nosnost 2000kg, ložná plocha 2,2 x 5,0m , Nosnost 3000kg"],
+    specs: ["Čelo nosnost 2000kg, Ložná plocha 2,2 x 5,0m , Nosnost 3000kg"],
     image: vp5,
   },
   {
     name: "MAN TGL Valník",
-    specs: ["ložná plocha 2,5 x 7,2m , nosnost 6 Tun"],
+    specs: ["Ložná plocha 2,5 x 7,2m , Nosnost 6 Tun"],
     image: vp6,
   },
   {
     name: "MAN TGM",
-    specs: ["Tložná plocha 2,5 x 7,5m", "Nosnost 12,5t"],
+    specs: ["Ložná plocha 2,5 x 7,5m", "Nosnost 12,5t"],
     image: vp7,
   },
   {
     name: "MAN TGA",
-    specs: ["ložná plocha 2,5 x 8m", "Nosnost 9,0t"],
+    specs: ["Ložná plocha 2,5 x 8m", "Nosnost 9,0t"],
     image: vp8,
   },
   {
     name: "MAN TGA HR EFFER 370",
-    specs: ["ložná plocha 2,5x6,5m", "nosnost 10 Tun "],
+    specs: ["Ložná plocha 2,5x6,5m", "Nosnost 10 Tun "],
     image: vp9,
   },
   {
     name: "Renault Premium HR EFFER 220",
-    specs: ["ložná plocha 2,5x7,5m", "Nosnost 10t"],
+    specs: ["Ložná plocha 2,5x7,5m", "Nosnost 10t"],
     image: vp11,
   },
 ];

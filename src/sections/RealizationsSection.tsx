@@ -24,33 +24,36 @@ import mn21 from "../assets/mn21.jpg";
 import mn22 from "../assets/mn22.jpg";
 
 const realizations = [
-  { src: mn1, alt: "Pásové rypadlo přepravované na podvalu" },
-  { src: mn2, alt: "Manipulační technika na odtahovém voze" },
-  { src: mn3, alt: "Přeprava bagru na nákladním odtahovém voze" },
-  { src: mn4, alt: "Nákladní převoz vysokozdvižné plošiny" },
-  { src: mn5, alt: "Převoz pásového bagru po průmyslové zóně" },
-  { src: mn6, alt: "Přeprava automobilu na odtahové plošině" },
-  { src: mn7, alt: "Nákladní převoz vibračního válce" },
-  { src: mn8, alt: "Přeprava pracovní plošiny na nákladním voze" },
-  { src: mn9, alt: "Nakladač přepravovaný na odtahovém speciálu" },
-  { src: mn10, alt: "Nákladní převoz mobilních zařízení" },
-  { src: mn11, alt: "Převoz plošiny pro stavební práce" },
-  { src: mn12, alt: "Přeprava chemických toalet na přívěsu" },
-  { src: mn13, alt: "Převoz dodávky Mercedes s přívěsem" },
-  { src: mn14, alt: "Nákladní přeprava zdvihací techniky" },
-  { src: mn15, alt: "Přeprava stavební techniky na nákladním voze" },
-  { src: mn16, alt: "Odtah manipulační techniky na podvalu" },
-  { src: mn17, alt: "Převoz nákladní automobilové techniky" },
-  { src: mn18, alt: "Nákladní přeprava průmyslového zařízení" },
-  { src: mn19, alt: "Přeprava bagru na odtahové plošině" },
-  { src: mn20, alt: "Převoz vozidla na specializovaném odtahu" },
-  { src: mn21, alt: "Nákladní transport stavebního stroje" },
-  { src: mn22, alt: "Realizace převozu těžké techniky" },
-];
+  { id: "mn1", src: mn1, alt: "Pásové rypadlo přepravované na podvalu" },
+  { id: "mn2", src: mn2, alt: "Manipulační technika na odtahovém voze" },
+  { id: "mn3", src: mn3, alt: "Přeprava bagru na nákladním odtahovém voze" },
+  { id: "mn4", src: mn4, alt: "Nákladní převoz vysokozdvižné plošiny" },
+  { id: "mn5", src: mn5, alt: "Převoz pásového bagru po průmyslové zóně" },
+  { id: "mn6", src: mn6, alt: "Přeprava automobilu na odtahové plošině" },
+  { id: "mn7", src: mn7, alt: "Nákladní převoz vibračního válce" },
+  { id: "mn8", src: mn8, alt: "Přeprava pracovní plošiny na nákladním voze" },
+  { id: "mn9", src: mn9, alt: "Nakladač přepravovaný na odtahovém speciálu" },
+  { id: "mn10", src: mn10, alt: "Nákladní převoz mobilních zařízení" },
+  { id: "mn11", src: mn11, alt: "Převoz plošiny pro stavební práce" },
+  { id: "mn12", src: mn12, alt: "Přeprava chemických toalet na přívěsu" },
+  { id: "mn13", src: mn13, alt: "Převoz dodávky Mercedes s přívěsem" },
+  { id: "mn14", src: mn14, alt: "Nákladní přeprava zdvihací techniky" },
+  { id: "mn15", src: mn15, alt: "Přeprava stavební techniky na nákladním voze" },
+  { id: "mn16", src: mn16, alt: "Odtah manipulační techniky na podvalu" },
+  { id: "mn17", src: mn17, alt: "Převoz nákladní automobilové techniky" },
+  { id: "mn18", src: mn18, alt: "Nákladní přeprava průmyslového zařízení" },
+  { id: "mn19", src: mn19, alt: "Přeprava bagru na odtahové plošině" },
+  { id: "mn20", src: mn20, alt: "Převoz vozidla na specializovaném odtahu" },
+  { id: "mn21", src: mn21, alt: "Nákladní transport stavebního stroje" },
+  { id: "mn22", src: mn22, alt: "Realizace převozu těžké techniky" },
+] as const;
+
+const INITIAL_COUNT = 12;
 
 function RealizationsSection() {
   const [isExpanded, setIsExpanded] = useState(false);
-  const visibleItems = isExpanded ? realizations : realizations.slice(0, 12);
+
+  const items = isExpanded ? realizations : realizations.slice(0, INITIAL_COUNT);
 
   return (
     <Section id="realizace">
@@ -63,18 +66,23 @@ function RealizationsSection() {
         </p>
       </Header>
 
-      <GalleryWrap>
-        <MasonryGrid>
-          {visibleItems.map((item, index) => (
-            <Card key={`realization-${index + 1}`}>
-              <img src={item.src} alt={item.alt} loading="lazy" />
-            </Card>
-          ))}
-        </MasonryGrid>
-        {!isExpanded && <FadeOverlay aria-hidden="true" />}
-      </GalleryWrap>
+      <PhotoGrid role="list">
+        {items.map((item, index) => (
+          <Card key={item.id} role="listitem">
+            <img
+              src={item.src}
+              alt={item.alt}
+              loading={index < 6 ? "eager" : "lazy"}
+              decoding="async"
+              width={800}
+              height={600}
+              sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, (max-width: 1200px) 33vw, 25vw"
+            />
+          </Card>
+        ))}
+      </PhotoGrid>
 
-      <MoreButton type="button" onClick={() => setIsExpanded((prev) => !prev)}>
+      <MoreButton type="button" onClick={() => setIsExpanded((v) => !v)}>
         {isExpanded ? "Méně" : "Více"}
       </MoreButton>
     </Section>
@@ -115,99 +123,36 @@ const Eyebrow = styled.span`
   font-weight: 800;
 `;
 
-const GalleryWrap = styled.div`
-  position: relative;
-`;
-
-const MasonryGrid = styled.div`
-  column-count: 4;
-  column-gap: 0.9rem;
+const PhotoGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.9rem;
 
   @media (max-width: 1200px) {
-    column-count: 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   @media (max-width: 860px) {
-    column-count: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   @media (max-width: 560px) {
-    column-count: 1;
+    grid-template-columns: minmax(0, 1fr);
   }
 `;
 
-const FadeOverlay = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 180px;
-  pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    rgba(12, 12, 13, 0) 0%,
-    rgba(12, 12, 13, 0.9) 62%,
-    rgba(12, 12, 13, 1) 100%
-  );
-`;
-
 const Card = styled.article`
-  position: relative;
-  break-inside: avoid;
-  margin-bottom: 0.9rem;
   border-radius: 0.9rem;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.11);
   background: #111216;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
 
   img {
-    width: 100%;
     display: block;
+    width: 100%;
     height: auto;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
-    filter: saturate(0.94) contrast(1.06) brightness(0.88);
-    transition: transform 0.35s ease, filter 0.35s ease;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background:
-      radial-gradient(
-        circle at 12% 10%,
-        rgba(255, 122, 26, 0.2),
-        transparent 44%
-      ),
-      linear-gradient(
-        165deg,
-        rgba(255, 122, 26, 0.1),
-        transparent 48%,
-        rgba(7, 8, 14, 0.28) 100%
-      );
-    opacity: 1;
-    transition: opacity 0.35s ease;
-  }
-
-  &:hover {
-    transform: translateY(-2px);
-    border-color: rgba(255, 143, 66, 0.45);
-    box-shadow: 0 18px 34px rgba(0, 0, 0, 0.3);
-
-    &::before {
-      opacity: 0.45;
-    }
-
-    img {
-      transform: scale(1.02);
-      filter: saturate(1) contrast(1.06) brightness(0.96);
-    }
   }
 `;
 
@@ -225,13 +170,9 @@ const MoreButton = styled.button`
   text-transform: uppercase;
   font-weight: 700;
   cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
+  transition: border-color 0.15s ease, color 0.15s ease;
 
   &:hover {
-    transform: translateY(-1px);
     border-color: rgba(255, 143, 66, 0.55);
     color: #ff9f57;
   }

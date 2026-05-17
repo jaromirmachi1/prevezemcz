@@ -4,10 +4,8 @@ import tireImage from "../assets/tire.png";
 
 const phoneNumber = "+420 737 248 076";
 const phoneHref = "tel:+420737248076";
-const serviceAddress =
-  "Frýdecká 339/395, 719 00 Ostrava, Vodárenská věž";
-const serviceAddressFull =
-  "Ostrava, Frýdecká 339/395, 719 00 – Vodárenská Věž";
+const serviceAddress = "Frýdecká 339/395, 719 00 Ostrava, Vodárenská věž";
+const serviceAddressFull = "Ostrava, Frýdecká 339/395, 719 00 – Vodárenská Věž";
 
 const servicePoints = [
   "Naše pneuservisní služby jsou určeny pro osobní i nákladní automobily.",
@@ -66,13 +64,6 @@ function PneuServicePage() {
             </p>
             <BookingActions>
               <PhoneButton href={phoneHref}>{phoneNumber}</PhoneButton>
-              <WebButton
-                href="https://dobregumy.cz/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Web pneuservisu
-              </WebButton>
             </BookingActions>
           </Booking>
         </HeroCopy>
@@ -90,9 +81,7 @@ function PneuServicePage() {
         <MapCopy>
           <Eyebrow>Kde nás najdete</Eyebrow>
           <h2 id="map-title">Mapa pneuservisu</h2>
-          <p>
-            Pro navigaci použijte přesnou adresu pneuservisu:
-          </p>
+          <p>Pro navigaci použijte přesnou adresu pneuservisu:</p>
           <address>{serviceAddressFull}</address>
         </MapCopy>
         <MapFrame>
@@ -120,7 +109,11 @@ const Hero = styled.section`
   min-height: 100svh;
   padding: clamp(8rem, 14vw, 10rem) 5vw clamp(3rem, 6vw, 5rem);
   background:
-    radial-gradient(circle at 74% 20%, rgba(255, 122, 26, 0.16), transparent 32%),
+    radial-gradient(
+      circle at 74% 20%,
+      rgba(255, 122, 26, 0.16),
+      transparent 32%
+    ),
     linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 40%);
 
   @media (max-width: 920px) {

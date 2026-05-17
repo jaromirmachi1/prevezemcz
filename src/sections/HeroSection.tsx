@@ -25,7 +25,7 @@ function HeroSection() {
               <PrimaryButton to="/kontakt">Objednat převoz</PrimaryButton>
             </Actions>
             <FloatingCard>
-              <strong>Do 10 tun</strong>
+              <strong>Do 14 tun</strong>
               <span>ČR + Evropa</span>
             </FloatingCard>
           </HeroFooter>

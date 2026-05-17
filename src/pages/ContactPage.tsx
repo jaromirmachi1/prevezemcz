@@ -44,8 +44,12 @@ function ContactPage() {
               </li>
               <li>
                 <strong>Web:</strong>
-                <a href="https://www.prevezm.cz" target="_blank" rel="noreferrer">
-                  www.prevezm.cz
+                <a
+                  href="https://www.prevezem.cz"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  www.prevezem.cz
                 </a>
               </li>
               <li>
