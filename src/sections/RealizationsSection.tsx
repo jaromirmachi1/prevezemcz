@@ -182,17 +182,17 @@ const Card = styled.article`
     background:
       radial-gradient(
         circle at 12% 10%,
-        rgba(255, 122, 26, 0.28),
+        rgba(255, 122, 26, 0.2),
         transparent 44%
       ),
       linear-gradient(
         165deg,
-        rgba(255, 122, 26, 0.14),
-        rgba(255, 122, 26, 0.02) 36%,
-        rgba(8, 8, 10, 0.18) 100%
+        rgba(255, 122, 26, 0.1),
+        transparent 48%,
+        rgba(7, 8, 14, 0.28) 100%
       );
-    mix-blend-mode: screen;
-    opacity: 0.95;
+    opacity: 1;
+    transition: opacity 0.35s ease;
   }
 
   &:hover {
@@ -200,9 +200,13 @@ const Card = styled.article`
     border-color: rgba(255, 143, 66, 0.45);
     box-shadow: 0 18px 34px rgba(0, 0, 0, 0.3);
 
+    &::before {
+      opacity: 0.45;
+    }
+
     img {
       transform: scale(1.02);
-      filter: saturate(1) contrast(1.08) brightness(0.95);
+      filter: saturate(1) contrast(1.06) brightness(0.96);
     }
   }
 `;
