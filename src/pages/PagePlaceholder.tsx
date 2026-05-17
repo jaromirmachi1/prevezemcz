@@ -43,7 +43,7 @@ const Wrap = styled.section`
   h1 {
     margin: 0;
     font-size: clamp(2.2rem, 6vw, 5rem);
-    line-height: 0.94;
+    line-height: 1.12;
     letter-spacing: -0.03em;
     text-transform: uppercase;
     max-width: 12ch;

@@ -94,7 +94,7 @@ const Header = styled.header`
   h2 {
     margin: 0.55rem 0 0.75rem;
     font-size: clamp(1.8rem, 4vw, 3rem);
-    line-height: 1.04;
+    line-height: 1.12;
     letter-spacing: -0.04em;
     text-transform: uppercase;
   }

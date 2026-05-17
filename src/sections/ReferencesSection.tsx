@@ -116,7 +116,7 @@ const SectionTitle = styled.h2`
   font-size: clamp(2rem, 4.5vw, 4.2rem);
   margin-bottom: clamp(1.1rem, 2.8vw, 2rem);
   letter-spacing: -0.04em;
-  line-height: 0.95;
+  line-height: 1.12;
   text-transform: uppercase;
 `
 

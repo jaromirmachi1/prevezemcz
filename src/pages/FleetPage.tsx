@@ -104,14 +104,18 @@ function FleetPage() {
         <HeroStats aria-label="Souhrn vozového parku">
           <li>
             <strong>14 t</strong>
-            <span>maximální nosnost</span>
+            <span>nosnost do 14 t</span>
           </li>
           <li>
-            <strong>10,8 m</strong>
-            <span>hydraulická ruka</span>
+            <strong>17 m</strong>
+            <span>hydraulická ruka do 17 m</span>
           </li>
           <li>
-            <strong>8</strong>
+            <strong>5 t</strong>
+            <span>nosnost ruky až 5 t</span>
+          </li>
+          <li>
+            <strong>10+</strong>
             <span>vozů k dispozici</span>
           </li>
         </HeroStats>
@@ -170,7 +174,7 @@ const HeroCopy = styled.header`
   h1 {
     margin: 0.8rem 0 1rem;
     font-size: clamp(3rem, 8.4vw, 8rem);
-    line-height: 0.96;
+    line-height: 1.12;
     letter-spacing: -0.06em;
     text-transform: uppercase;
     max-width: 10ch;
@@ -227,7 +231,7 @@ const HeroStats = styled.ul`
   }
 
   @media (max-width: 860px) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   @media (max-width: 620px) {

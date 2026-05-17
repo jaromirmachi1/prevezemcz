@@ -20,7 +20,7 @@ function CareerPage() {
 
     descriptionTag.setAttribute(
       "content",
-      "Volné pracovní pozice v Převezem.cz: řidič na ranní rozvoz chlazeného zboží a řidič na vnitrostátní nákladní dopravu.",
+      "Volná pracovní pozice v Převezem.cz: řidič na vnitrostátní nákladní dopravu s odtahovým vozidlem a HR.",
     );
   }, []);
 
@@ -31,26 +31,12 @@ function CareerPage() {
           <Eyebrow>Kariéra</Eyebrow>
           <h1 id="career-title">Přidejte se k týmu Převezem.cz</h1>
           <p>
-            Aktuálně obsazujeme dvě řidičské pozice. Pokud máte potřebné
+            Aktuálně obsazujeme řidičskou pozici. Pokud máte potřebné
             oprávnění a chuť pracovat, ozvěte se nám.
           </p>
         </Header>
 
         <JobsGrid>
-          <JobCard>
-            <h2>Hledáme řidiče na ranní rozvoz chlazeného zboží</h2>
-            <h3>Požadavky</h3>
-            <ul>
-              <li>řidičský průkaz skupiny &quot;B&quot;</li>
-            </ul>
-            <JobContact>
-              Více info na tel.:{" "}
-              <a href={phoneHref} aria-label="Zavolat na 732 750 428">
-                {phone}
-              </a>
-            </JobContact>
-          </JobCard>
-
           <JobCard>
             <h2>
               Hledáme řidiče na vnitrostátní nákladní dopravu, odtahové vozidlo,
@@ -87,7 +73,7 @@ const Header = styled.header`
   h1 {
     margin: 0.8rem 0 1rem;
     font-size: clamp(2.8rem, 7.2vw, 6.8rem);
-    line-height: 0.9;
+    line-height: 1.12;
     letter-spacing: -0.05em;
     text-transform: uppercase;
     max-width: 12ch;

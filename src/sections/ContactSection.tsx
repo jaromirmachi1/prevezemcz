@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ContactForm from "../components/ContactForm";
 
 function ContactSection() {
   return (
@@ -9,7 +10,7 @@ function ContactSection() {
           <h2>Máte co převézt?</h2>
           <p>
             Napište nám pár detailů a připravíme rychlé řešení pro převoz
-            techniky, aut, zboží nebo pronájem dodávky.
+            techniky, aut nebo nákladu.
           </p>
           <ContactGrid>
             <ContactItem>
@@ -23,42 +24,7 @@ function ContactSection() {
           </ContactGrid>
         </Intro>
 
-        <Form aria-label="Kontaktní formulář">
-          <Field>
-            <label htmlFor="name">Jméno</label>
-            <input id="name" name="name" type="text" autoComplete="name" />
-          </Field>
-          <Field>
-            <label htmlFor="phone">Telefon</label>
-            <input id="phone" name="phone" type="tel" autoComplete="tel" />
-          </Field>
-          <Field>
-            <label htmlFor="email">E-mail</label>
-            <input id="email" name="email" type="email" autoComplete="email" />
-          </Field>
-          <Field>
-            <label htmlFor="service">Typ služby</label>
-            <select id="service" name="service" defaultValue="">
-              <option value="" disabled>
-                Vyberte službu
-              </option>
-              <option>Převoz techniky</option>
-              <option>Přeprava auta</option>
-              <option>Převoz zboží</option>
-              <option>Půjčení dodávky</option>
-            </select>
-          </Field>
-          <FieldFull>
-            <label htmlFor="message">Co potřebujete?</label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              placeholder="Napište odkud, kam, kdy a co povezeme."
-            />
-          </FieldFull>
-          <SubmitButton type="submit">Odeslat poptávku</SubmitButton>
-        </Form>
+        <ContactForm source="homepage" idPrefix="home-contact" />
       </Content>
     </Footer>
   );
@@ -153,91 +119,3 @@ const ContactItem = styled.div`
     }
   }
 `;
-
-const Form = styled.form`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.9rem;
-  padding: clamp(1rem, 2.5vw, 1.6rem);
-  border-radius: 1.1rem;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.07),
-      rgba(255, 255, 255, 0.015)
-    ),
-    rgba(12, 12, 16, 0.84);
-  backdrop-filter: blur(12px);
-
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const Field = styled.div`
-  display: grid;
-  gap: 0.45rem;
-
-  label {
-    color: #ff9f57;
-    font-size: 0.72rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  input,
-  select,
-  textarea {
-    width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 0.8rem;
-    background: rgba(255, 255, 255, 0.045);
-    color: #fff;
-    font: inherit;
-    padding: 0.9rem 0.95rem;
-    outline: none;
-    transition:
-      border-color 0.2s ease,
-      background 0.2s ease;
-  }
-
-  textarea {
-    resize: vertical;
-  }
-
-  input:focus,
-  select:focus,
-  textarea:focus {
-    border-color: rgba(255, 122, 26, 0.65);
-    background: rgba(255, 255, 255, 0.07);
-  }
-`;
-
-const FieldFull = styled(Field)`
-  grid-column: 1 / -1;
-`;
-
-const SubmitButton = styled.button`
-  grid-column: 1 / -1;
-  border: 0;
-  border-radius: 999px;
-  padding: 0.95rem 1.35rem;
-  background: linear-gradient(130deg, #ff9038, #ff5f00 56%, #e14800);
-  color: #fff;
-  font-weight: 800;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 14px 34px rgba(255, 95, 0, 0.24);
-  }
-`;
-

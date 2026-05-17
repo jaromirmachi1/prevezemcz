@@ -4,8 +4,10 @@ import tireImage from "../assets/tire.png";
 
 const phoneNumber = "+420 737 248 076";
 const phoneHref = "tel:+420737248076";
-const serviceAddress = "Pneuservis FM - Car, 738 01 Frýdek-Místek";
-const serviceAddressFull = "Pneuservis FM - Car, 738 01 Frýdek-Místek-Frýdek-Místek 1";
+const serviceAddress =
+  "Frýdecká 339/395, 719 00 Ostrava, Vodárenská věž";
+const serviceAddressFull =
+  "Ostrava, Frýdecká 339/395, 719 00 – Vodárenská Věž";
 
 const servicePoints = [
   "Naše pneuservisní služby jsou určeny pro osobní i nákladní automobily.",
@@ -133,7 +135,7 @@ const HeroCopy = styled.div`
   h1 {
     margin: 0.85rem 0 0;
     font-size: clamp(3rem, 8.2vw, 7rem);
-    line-height: 0.88;
+    line-height: 1.12;
     letter-spacing: -0.05em;
     text-transform: uppercase;
   }
