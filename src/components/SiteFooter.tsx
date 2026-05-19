@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import logoPrevezem from "../assets/logo-prevezem-white.svg";
 import uitherapyLogo from "../assets/uitherapylogo.png";
 
 const footerLinks = [
@@ -24,7 +25,7 @@ function SiteFooter() {
         <Brand>
           <Logo to="/" aria-label="Převezem.cz">
             <img
-              src="https://www.prevezem.cz/images/design/logo-prevezem-white.svg"
+              src={logoPrevezem}
               alt="Převezem.cz"
               loading="lazy"
             />

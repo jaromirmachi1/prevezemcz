@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 import tireImage from "../assets/tire.png";
 
@@ -14,25 +13,6 @@ const servicePoints = [
 ];
 
 function PneuServicePage() {
-  useEffect(() => {
-    document.title = "Pneuservis Frýdek-Místek | Převezem.cz";
-
-    let descriptionTag = document.querySelector<HTMLMetaElement>(
-      'meta[name="description"]',
-    );
-
-    if (!descriptionTag) {
-      descriptionTag = document.createElement("meta");
-      descriptionTag.setAttribute("name", "description");
-      document.head.appendChild(descriptionTag);
-    }
-
-    descriptionTag.setAttribute(
-      "content",
-      "Pneuservis pro osobní i nákladní automobily. Výměna pneumatik na zimní a letní sezónu, montáž, demontáž a vyvážení pneumatik.",
-    );
-  }, []);
-
   return (
     <main>
       <Hero aria-labelledby="pneuservis-title">

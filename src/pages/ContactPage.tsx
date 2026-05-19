@@ -1,27 +1,7 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 import ContactForm from "../components/ContactForm";
 
 function ContactPage() {
-  useEffect(() => {
-    document.title = "Kontakt | Převezem.cz";
-
-    let descriptionTag = document.querySelector<HTMLMetaElement>(
-      'meta[name="description"]',
-    );
-
-    if (!descriptionTag) {
-      descriptionTag = document.createElement("meta");
-      descriptionTag.setAttribute("name", "description");
-      document.head.appendChild(descriptionTag);
-    }
-
-    descriptionTag.setAttribute(
-      "content",
-      "Kontaktní informace Převezem.cz a fakturační údaje. Napište nám přes formulář a připravíme rychlé řešení přepravy i pronájmu.",
-    );
-  }, []);
-
   return (
     <main>
       <Section aria-labelledby="contact-title">

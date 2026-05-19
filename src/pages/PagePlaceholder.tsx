@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 
 type PagePlaceholderProps = {
@@ -7,10 +6,6 @@ type PagePlaceholderProps = {
 };
 
 function PagePlaceholder({ title, description }: PagePlaceholderProps) {
-  useEffect(() => {
-    document.title = `${title} | Převezem.cz`;
-  }, [title]);
-
   return (
     <main>
       <Wrap>

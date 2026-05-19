@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import logoPrevezem from "../assets/logo-prevezem-white.svg";
 
 const menuLinks = [
   {
@@ -87,7 +88,7 @@ function FloatingNav() {
       <NavRoot aria-label="Hlavní navigace">
         <Logo to="/" aria-label="Převezem.cz" onClick={closeMenu}>
           <LogoImage
-            src="https://www.prevezem.cz/images/design/logo-prevezem-white.svg"
+            src={logoPrevezem}
             alt="Převoz manipulační techniky, aut a zboží."
             loading="eager"
           />

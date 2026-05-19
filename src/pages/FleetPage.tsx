@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 import vp1 from "../assets/vpImages/vp1.jpg";
 import vp2 from "../assets/vpImages/vp2.jpg";
@@ -71,25 +70,6 @@ const vehicles: FleetVehicle[] = [
 ];
 
 function FleetPage() {
-  useEffect(() => {
-    document.title = "Vozový park | Převezem.cz";
-
-    let descriptionTag = document.querySelector<HTMLMetaElement>(
-      'meta[name="description"]',
-    );
-
-    if (!descriptionTag) {
-      descriptionTag = document.createElement("meta");
-      descriptionTag.setAttribute("name", "description");
-      document.head.appendChild(descriptionTag);
-    }
-
-    descriptionTag.setAttribute(
-      "content",
-      "Vozový park Převezem.cz pro převoz manipulační techniky, automobilů, stavebního materiálu, palet i chladící přepravu.",
-    );
-  }, []);
-
   return (
     <main>
       <Hero aria-labelledby="fleet-title">

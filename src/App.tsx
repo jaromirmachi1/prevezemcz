@@ -1,12 +1,15 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { injectOrganizationSchema } from "./seo/jsonLd";
+import { getPageMeta, setPageMeta } from "./seo/siteMeta";
 import FloatingNav from "./components/FloatingNav";
 import SiteFooter from "./components/SiteFooter";
 import CareerPage from "./pages/CareerPage";
 import ContactPage from "./pages/ContactPage";
 import FleetPage from "./pages/FleetPage";
 import PneuServicePage from "./pages/PneuServicePage";
+import NotFoundPage from "./pages/NotFoundPage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactSection from "./sections/ContactSection";
 import HeroSection from "./sections/HeroSection";
@@ -18,6 +21,11 @@ function App() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    injectOrganizationSchema();
+  }, []);
+
+  useEffect(() => {
+    setPageMeta(getPageMeta(pathname));
     window.scrollTo({ top: 0, behavior: "auto" });
   }, [pathname]);
 
@@ -44,7 +52,7 @@ function App() {
         <Route path="/pneuservis" element={<PneuServicePage />} />
         <Route path="/kariera" element={<CareerPage />} />
         <Route path="/kontakt" element={<ContactPage />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <SiteFooter />
     </Page>

@@ -1,29 +1,9 @@
-import { useEffect } from "react";
 import styled from "styled-components";
 
 const phone = "732 750 428";
 const phoneHref = "tel:+420732750428";
 
 function CareerPage() {
-  useEffect(() => {
-    document.title = "Kariéra | Převezem.cz";
-
-    let descriptionTag = document.querySelector<HTMLMetaElement>(
-      'meta[name="description"]',
-    );
-
-    if (!descriptionTag) {
-      descriptionTag = document.createElement("meta");
-      descriptionTag.setAttribute("name", "description");
-      document.head.appendChild(descriptionTag);
-    }
-
-    descriptionTag.setAttribute(
-      "content",
-      "Volná pracovní pozice v Převezem.cz: řidič na vnitrostátní nákladní dopravu s odtahovým vozidlem a HR.",
-    );
-  }, []);
-
   return (
     <main>
       <Section aria-labelledby="career-title">
