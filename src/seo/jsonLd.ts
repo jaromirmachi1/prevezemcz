@@ -17,6 +17,7 @@ const organizationSchema = {
     addressCountry: "CZ",
   },
   areaServed: ["CZ", "EU"],
+  sameAs: ["https://www.facebook.com/prevezem.cz/"],
   description:
     "Přeprava manipulační techniky, aut a nákladního zboží po celé ČR i Evropě.",
 };

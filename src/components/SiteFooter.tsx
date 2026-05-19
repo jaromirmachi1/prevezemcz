@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logoPrevezem from "../assets/logo-prevezem-white.svg";
 import uitherapyLogo from "../assets/uitherapylogo.png";
+import { FACEBOOK_URL, FacebookIcon } from "./facebook";
 
 const footerLinks = [
   { label: "Úvod", href: "/" },
@@ -65,6 +66,15 @@ function SiteFooter() {
           <a href="tel:+420732750428">+420 732 750 428</a>
           <a href="mailto:info@prevezem.cz">info@prevezem.cz</a>
           <span>Ostrava - ČR - Evropa</span>
+          <FacebookFooterLink
+            href={FACEBOOK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Převezem.cz na Facebooku (otevře se v novém okně)"
+          >
+            <FacebookIcon size={16} />
+            Facebook
+          </FacebookFooterLink>
         </Contact>
       </Top>
 
@@ -216,6 +226,40 @@ const Contact = styled.address`
   span {
     color: #bcbcc5;
     margin-top: 0.35rem;
+  }
+`;
+
+const FacebookFooterLink = styled.a`
+  display: none;
+  align-items: center;
+  gap: 0.55rem;
+  width: fit-content;
+  margin-top: 0.65rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(246, 246, 247, 0.78);
+  text-decoration: none;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+
+  &:hover,
+  &:focus-visible {
+    color: #ff9f57;
+    background: rgba(255, 122, 26, 0.1);
+    border-color: rgba(255, 122, 26, 0.28);
+    outline: none;
+  }
+
+  @media (max-width: 820px) {
+    display: inline-flex;
   }
 `;
 

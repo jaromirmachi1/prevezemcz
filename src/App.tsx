@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { injectOrganizationSchema } from "./seo/jsonLd";
 import { getPageMeta, setPageMeta } from "./seo/siteMeta";
+import FacebookPeek from "./components/FacebookPeek";
 import FloatingNav from "./components/FloatingNav";
 import SiteFooter from "./components/SiteFooter";
 import CareerPage from "./pages/CareerPage";
@@ -32,6 +33,7 @@ function App() {
   return (
     <Page>
       <FloatingNav />
+      <FacebookPeek />
       <Routes>
         <Route
           path="/"

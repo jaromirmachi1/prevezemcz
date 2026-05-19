@@ -101,8 +101,9 @@ function FloatingNav() {
           $isOpen={isMenuOpen}
           onClick={toggleMenu}
         >
-          <span>{isMenuOpen ? "Zavřít" : "Menu"}</span>
+          <MenuLabel>{isMenuOpen ? "Zavřít" : "Menu"}</MenuLabel>
           <MenuLines aria-hidden="true" data-lines>
+            <span />
             <span />
             <span />
           </MenuLines>
@@ -232,13 +233,17 @@ const MenuButton = styled.button<{ $isOpen: boolean }>`
   ${({ $isOpen }) =>
     $isOpen &&
     `
-      [data-lines] span:first-child {
-        transform: translateY(5px) rotate(18deg);
+      [data-lines] span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
       }
 
-      [data-lines] span:last-child {
-        width: 100%;
-        transform: translateY(-5px) rotate(-18deg);
+      [data-lines] span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      [data-lines] span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
       }
     `}
 
@@ -248,10 +253,12 @@ const MenuButton = styled.button<{ $isOpen: boolean }>`
 
   @media (max-width: 820px) {
     border-left: 1px solid rgba(255, 255, 255, 0.16);
+  }
+`;
 
-    span:first-child {
-      display: none;
-    }
+const MenuLabel = styled.span`
+  @media (max-width: 820px) {
+    display: none;
   }
 `;
 
@@ -263,14 +270,13 @@ const MenuLines = styled.span`
   span {
     display: block;
     height: 2px;
+    width: 100%;
     background: currentColor;
     border-radius: 999px;
-    transform-origin: left center;
-    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  span:last-child {
-    width: 65%;
+    transform-origin: center;
+    transition:
+      transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.25s ease;
   }
 `;
 
