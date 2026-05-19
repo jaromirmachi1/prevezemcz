@@ -37,7 +37,7 @@ function PneuServicePage() {
     <main>
       <Hero aria-labelledby="pneuservis-title">
         <HeroCopy>
-          <Eyebrow>Pneuservis Frýdek-Místek</Eyebrow>
+          <Eyebrow>prevezem.cz</Eyebrow>
           <h1 id="pneuservis-title">Pneuservis</h1>
           <Lead>Pro osobní i nákladní automobily</Lead>
 
