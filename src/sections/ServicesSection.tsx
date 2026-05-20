@@ -27,7 +27,7 @@ const serviceCards = [
   {
     title: "Pneuservis",
     text: "Profesionální přezutí a vyvážení pneumatik pro osobní i nákladní automobily, včetně zimní a letní sezóny.",
-    meta: "Pneuservis Frýdek-Místek",
+    meta: "Pneuservis",
     href: "/pneuservis",
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
