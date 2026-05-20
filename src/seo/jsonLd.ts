@@ -5,7 +5,7 @@ const organizationSchema = {
   "@type": "LocalBusiness",
   name: "Převezem.cz",
   url: SITE_URL,
-  logo: `${SITE_URL}/og-image.png`,
+  logo: `${SITE_URL}/favicon-48x48.png`,
   image: `${SITE_URL}/og-image.png`,
   telephone: "+420732750428",
   email: "info@prevezem.cz",
